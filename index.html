@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matvex - Premium Tissue Paper | Soft & Sustainable</title>
+  <meta name="description" content="Premium B2B tissue paper supplier. Bulk orders, custom branding, sustainable products for hotels, restaurants, and businesses across India.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="contact-info">
+          <span>📞 1-800-MATVEX</span>
+          <span>✉️ info@matvextrade.com</span>
+        </div>
+        <div class="top-bar-actions">
+          <a href="#" onclick="showBusinessLogin()">Business Login</a>
+          <a href="#">Track Order</a>
+          <button class="btn-cart" onclick="toggleCart()">
+            🛒 Cart (<span id="cartCount">0</span>)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>MATVEX</h1>
+          <p class="tagline">Soft & Sustainable – Your Premium Tissue Paper Destination</p>
+        </div>
+        <nav class="main-nav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#homes" class="nav-link">For Homes</a>
+          <a href="#facilities" class="nav-link">Large Facilities</a>
+          <a href="#custom" class="nav-link">Custom Design</a>
+          <a href="#sustainability" class="nav-link">Sustainability</a>
+          <a href="#company" class="nav-link">Company</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h2 class="hero-title">Leading with Design Excellence</h2>
+        <p class="hero-subtitle">Premium tissue products crafted for comfort, designed for your everyday luxury</p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="scrollToSection('facilities')">Shop Now</button>
+          <button class="btn-secondary" onclick="showQuoteModal()">Request Quote</button>
+          <button class="btn-outline" onclick="downloadCatalog()">Download Catalog</button>
+        </div>
+        <div class="hero-features">
+          <div class="feature-badge">
+            <span class="badge-icon">🌱</span>
+            <span>Eco-Friendly</span>
+          </div>
+          <div class="feature-badge">
+            <span class="badge-icon">✨</span>
+            <span>Premium Quality</span>
+          </div>
+          <div class="feature-badge">
+            <span class="badge-icon">🎨</span>
+            <span>Custom Design</span>
+          </div>
+          <div class="feature-badge">
+            <span class="badge-icon">🚚</span>
+            <span>Fast Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="brand-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content">
+          <span class="section-label">Our Story</span>
+          <h2>Innovation Meets Sustainability</h2>
+          <p>At Matvex, we believe that everyday essentials should be extraordinary. Since our inception, we've been committed to delivering premium tissue products that combine unmatched softness with environmental responsibility.</p>
+          <p>Our journey began with a simple vision: to transform the tissue paper industry through design excellence and sustainable practices. Today, we serve over 500+ businesses across India, from luxury hotels to healthcare facilities.</p>
+          <div class="story-stats">
+            <div class="stat">
+              <h3>500+</h3>
+              <p>Business Clients</p>
+            </div>
+            <div class="stat">
+              <h3>10M+</h3>
+              <p>Products Delivered</p>
+            </div>
+            <div class="stat">
+              <h3>100%</h3>
+              <p>Eco-Friendly</p>
+            </div>
+          </div>
+        </div>
+        <div class="story-image">
+          <div class="image-placeholder">
+            <div style="width:100%;height:500px;background:#E8F5E9;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#2E7D32;">Premium Tissue Products</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="categories" id="homes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Products</span>
+        <h2>Designed for Every Need</h2>
+      </div>
+      <div class="category-grid">
+        <div class="category-card" onclick="filterProducts('facial')">
+          <div class="category-image">
+            <div style="width:100%;height:280px;background:#E3F2FD;display:flex;align-items:center;justify-content:center;font-size:20px;color:#2196F3;">Facial Tissue</div>
+          </div>
+          <h3>Facial Tissue</h3>
+          <p>Ultra-soft, premium quality for everyday comfort</p>
+          <a href="#" class="category-link">Shop Now →</a>
+        </div>
+        <div class="category-card" onclick="filterProducts('napkin')">
+          <div class="category-image">
+            <div style="width:100%;height:280px;background:#FFF3E0;display:flex;align-items:center;justify-content:center;font-size:20px;color:#FF9800;">Paper Napkins</div>
+          </div>
+          <h3>Paper Napkins</h3>
+          <p>Elegant designs for dining and hospitality</p>
+          <a href="#" class="category-link">Shop Now →</a>
+        </div>
+        <div class="category-card" onclick="filterProducts('toilet')">
+          <div class="category-image">
+            <div style="width:100%;height:280px;background:#F3E5F5;display:flex;align-items:center;justify-content:center;font-size:20px;color:#9C27B0;">Toilet Rolls</div>
+          </div>
+          <h3>Toilet Rolls</h3>
+          <p>Strong, absorbent, and eco-friendly</p>
+          <a href="#" class="category-link">Shop Now →</a>
+        </div>
+        <div class="category-card" onclick="filterProducts('kitchen')">
+          <div class="category-image">
+            <div style="width:100%;height:280px;background:#E8F5E9;display:flex;align-items:center;justify-content:center;font-size:20px;color:#4CAF50;">Kitchen Towels</div>
+          </div>
+          <h3>Kitchen Towels</h3>
+          <p>Heavy-duty absorbency for all tasks</p>
+          <a href="#" class="category-link">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Shop Products</span>
+        <h2>Premium Tissue Collection</h2>
+        <p>Browse our complete range with transparent pricing and instant ordering</p>
+      </div>
+      <div class="products-container" id="productsContainer">
+        <!-- Products will be loaded here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Design Section -->
+  <section class="custom-design" id="custom">
+    <div class="container">
+      <div class="custom-grid">
+        <div class="custom-content">
+          <span class="section-label">Custom Solutions</span>
+          <h2>Your Brand, Your Design</h2>
+          <p>Transform your tissue products into brand ambassadors. Our custom design service allows you to create unique packaging that reflects your brand identity.</p>
+          <ul class="custom-features">
+            <li>✓ Custom logo printing</li>
+            <li>✓ Bespoke color schemes</li>
+            <li>✓ Multiple size options</li>
+            <li>✓ Premium unboxing experience</li>
+            <li>✓ Low minimum order quantities</li>
+            <li>✓ Fast turnaround time</li>
+          </ul>
+          <button class="btn-primary" onclick="showCustomDesignForm()">Start Your Design</button>
+        </div>
+        <div class="custom-showcase">
+          <div class="showcase-grid">
+            <div class="showcase-item">
+              <div style="width:100%;height:200px;background:#FFE0B2;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#E65100;">Custom Box 1</div>
+            </div>
+            <div class="showcase-item">
+              <div style="width:100%;height:200px;background:#C5E1A5;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#33691E;">Custom Box 2</div>
+            </div>
+            <div class="showcase-item">
+              <div style="width:100%;height:200px;background:#B3E5FC;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#01579B;">Custom Box 3</div>
+            </div>
+            <div class="showcase-item">
+              <div style="width:100%;height:200px;background:#F8BBD0;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#880E4F;">Custom Box 4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Section -->
+  <section class="sustainability" id="sustainability">
+    <div class="container">
+      <div class="sustainability-content">
+        <span class="section-label">Sustainability</span>
+        <h2>Committed to a Greener Future</h2>
+        <p class="lead">Every product we create is a step towards environmental responsibility</p>
+        <div class="sustainability-grid">
+          <div class="sustainability-card">
+            <div class="card-icon">🌿</div>
+            <h3>Bamboo Fiber</h3>
+            <p>Our premium range uses sustainable bamboo, one of the fastest-growing plants on Earth</p>
+          </div>
+          <div class="sustainability-card">
+            <div class="card-icon">♻️</div>
+            <h3>100% Recyclable</h3>
+            <p>All packaging materials are fully recyclable and biodegradable</p>
+          </div>
+          <div class="sustainability-card">
+            <div class="card-icon">💧</div>
+            <h3>Water Conservation</h3>
+            <p>Our manufacturing process uses 30% less water than traditional methods</p>
+          </div>
+          <div class="sustainability-card">
+            <div class="card-icon">🌍</div>
+            <h3>Carbon Neutral</h3>
+            <p>We offset 100% of our carbon emissions through verified programs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Experience Premium Quality?</h2>
+        <p>Join 500+ businesses who trust Matvex for their tissue paper needs</p>
+        <div class="cta-buttons">
+          <button class="btn-primary-large" onclick="scrollToSection('facilities')">Start Shopping</button>
+          <button class="btn-outline-large" onclick="showQuoteModal()">Request Bulk Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="company">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MATVEX</h3>
+          <p>Premium tissue paper supplier committed to quality, sustainability, and design excellence.</p>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Facial Tissue</a></li>
+            <li><a href="#">Paper Napkins</a></li>
+            <li><a href="#">Toilet Rolls</a></li>
+            <li><a href="#">Kitchen Towels</a></li>
+            <li><a href="#">Custom Design</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Business</h4>
+          <ul>
+            <li><a href="#">Bulk Orders</a></li>
+            <li><a href="#">Custom Branding</a></li>
+            <li><a href="#">Credit Terms</a></li>
+            <li><a href="#">Become a Partner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Matvex Trade (OPC) Pvt. Ltd. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
